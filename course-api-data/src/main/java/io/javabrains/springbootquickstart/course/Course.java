@@ -2,6 +2,7 @@ package io.javabrains.springbootquickstart.course;
 import io.javabrains.springbootquickstart.topic.Topic;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.ManyToOne;
 
 @Entity
 public class Course {
@@ -9,7 +10,7 @@ public class Course {
     private String id;
     private String name;
     private String description;
-    
+    @ManyToOne
     private Topic topic;
     
     public Topic getTopic() {
